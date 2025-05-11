@@ -1,0 +1,136 @@
+{% extends "base.html" %} {% block title %}Analyze Email{% endblock %} {% block
+content %}
+
+<!-- Add Tesseract.js library from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+
+<div
+  class="container d-flex justify-content-center align-items-center"
+  style="min-height: 70vh"
+>
+  <div class="card shadow w-100" style="max-width: 600px">
+    <div class="card-body">
+      <h3 class="card-title text-center mb-4">Analyze a Suspicious Email</h3>
+
+      <div id="loading" class="text-center my-3 d-none">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-2" id="progress-message">Processing image...</p>
+      </div>
+
+      {% if error %}
+      <div class="alert alert-danger" role="alert">{{ error }}</div>
+      {% endif %}
+
+      <form id="email-form" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="email_author" class="form-label">Sender Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email_author"
+            name="email_author"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email_text" class="form-label">Email Content</label>
+          <textarea
+            class="form-control"
+            id="email_text"
+            name="email_text"
+            rows="6"
+            placeholder="Paste email content here (or upload a screenshot below)"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="email_image" class="form-label"
+            >Or Upload a Screenshot</label
+          >
+          <input
+            class="form-control"
+            type="file"
+            name="email_image"
+            id="email_image"
+            accept=".png,.jpg,.jpeg,.webp,.bmp,.tiff"
+          />
+          <div class="form-text">
+            Image text will be extracted in your browser - no server-side OCR
+            needed.
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3">
+          <button type="submit" class="btn btn-primary">Analyze Email</button>
+          <a href="{{ url_for('history') }}" class="btn btn-secondary">
+            View Scan History
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const emailForm = document.getElementById("email-form");
+    const emailImageInput = document.getElementById("email_image");
+    const emailTextArea = document.getElementById("email_text");
+    const loadingDiv = document.getElementById("loading");
+    const progressMessage = document.getElementById("progress-message");
+
+    // Listen for file input changes
+    emailImageInput.addEventListener("change", function (e) {
+      const file = e.target.files[0];
+      if (file && emailTextArea.value.trim() === "") {
+        // Show loading indicator
+        loadingDiv.classList.remove("d-none");
+
+        // Process image with Tesseract.js
+        Tesseract.recognize(file, "eng", {
+          logger: (message) => {
+            if (message.status === "recognizing text") {
+              progressMessage.textContent = `Processing image: ${Math.round(
+                message.progress * 100
+              )}%`;
+            }
+          },
+        })
+          .then(({ data: { text } }) => {
+            // Fill textarea with extracted text
+            emailTextArea.value = text;
+            loadingDiv.classList.add("d-none");
+          })
+          .catch((err) => {
+            console.error("OCR Error:", err);
+            loadingDiv.classList.add("d-none");
+            alert(
+              "Failed to extract text from image. Please try typing the content manually."
+            );
+          });
+      }
+    });
+
+    // Form submission handler
+    emailForm.addEventListener("submit", function (e) {
+      const emailText = emailTextArea.value.trim();
+      const fileSelected = emailImageInput.files.length > 0;
+
+      if (!emailText && !fileSelected) {
+        e.preventDefault();
+        alert("Please enter email content or upload an image.");
+      } else if (!emailText && fileSelected) {
+        // If file is selected but OCR hasn't completed
+        if (loadingDiv.classList.contains("d-none") === false) {
+          e.preventDefault();
+          alert("Please wait for image processing to complete.");
+        }
+      }
+    });
+  });
+</script>
+
+{% endblock %}

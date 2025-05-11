@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% block title %}Scan History{% endblock %} {% block
+content %}
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-body">
+      <h3 class="card-title text-center mb-4">Scan History</h3>
+
+      {% if history %}
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Sender</th>
+              <th scope="col">Content</th>
+              <th scope="col">Score</th>
+              <th scope="col">Timestamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in history %}
+            <tr>
+              <th scope="row">{{ loop.index + (page - 1) * 15 }}</th>
+              <td>{{ item[1] }}</td>
+              <td>{{ item[2] }}</td>
+              <td>{{ item[3] }}%</td>
+              <td>{{ item[4] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      {% if total_pages > 1 %}
+      <nav aria-label="History pagination">
+        <ul class="pagination justify-content-center mt-4">
+          {% for p in range(1, total_pages + 1) %}
+          <li class="page-item {% if p == page %}active{% endif %}">
+            <a class="page-link" href="{{ url_for('history', page=p) }}"
+              >{{ p }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      {% endif %} {% else %}
+      <p class="text-center text-muted">No scans yet.</p>
+      {% endif %}
+
+      <div class="text-center mt-3">
+        <a href="{{ url_for('index') }}" class="btn btn-primary"
+          >Analyze New Email</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
