@@ -17,3 +17,11 @@ This Flask-based application allows users to analyze potentially malicious email
    git clone https://github.com/opulenceee/phishing-final-project.git
    cd phishing-final-project
    ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the app:
+   ```bash
+   python app.py
+   ```
