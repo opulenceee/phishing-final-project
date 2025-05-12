@@ -25,3 +25,19 @@ This Flask-based application allows users to analyze potentially malicious email
    ```bash
    python app.py
    ```
+
+## AI-Powered Email Analysis (Optional)
+
+To enable AI-based phishing explanations using a local model (Mistral):
+
+1. Install [Ollama] using the following link: (https://ollama.com/download)
+
+2. Run:
+
+   ```bash
+   ollama pull mistral
+   ollama run mistral
+   ```
+
+3. Set `USE_LOCAL_AI=true` in your `.env` file.
+   Otherwise, the app will still work perfectly, just without AI explanations.

@@ -10,8 +10,6 @@ import requests
 from dotenv import load_dotenv
 import os
 import json
-from PIL import Image
-import pytesseract
 from urllib.parse import urlparse
 
 load_dotenv()
@@ -24,7 +22,7 @@ def allowed_file(filename):
     return '.' in filename and \
         filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-
+USE_LOCAL_AI = os.getenv('USE_LOCAL_AI', 'false').lower() == 'true'
 app.secret_key = os.getenv('secret_key')
 
 login_manager = LoginManager()
@@ -105,6 +103,9 @@ def check_virustotal_domain(domain):
 
 
 def query_llm(email_text):
+    if not USE_LOCAL_AI:
+        return "(AI explaination disabled - local model not confiugred)"
+    
     prompt = f"""You are a cybersecurity analyst with vast experience in analyzing phishing emails. Analyze the following email and determine whether it is a phishing attempt. If it is, explain why (e.g., suspicious links, urgency, sender impersonation). If it's not phishing, explain why it appears safe.
 
 Email content:
