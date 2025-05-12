@@ -12,6 +12,7 @@ import os
 import json
 from PIL import Image
 import pytesseract
+from urllib.parse import urlparse
 
 load_dotenv()
 app = Flask(__name__)
@@ -73,22 +74,35 @@ def init_db():
 
 init_db()
 
-def check_phishtank_url(url_to_check):
-    payload = {
-        "url": url_to_check,
-        "format": json
+def check_virustotal_domain(domain):
+    api_key = os.getenv("VIRUSTOTAL_API_KEY")
+    url = f"https://www.virustotal.com/api/v3/domains/{domain}"
+    headers = {
+        "x-apikey": api_key
+    }
 
-    } 
     try:
-        response = requests.post("https://checkurl.phishtank.com/checkurl/", data=payload)
+        response = requests.get(url, headers=headers)
+        if response.status_code == 404:
+            print(f"VirusTotal: Domain '{domain}' not found in database.")
+            return False
+        elif response.status_code != 200:
+            print("VirusTotal error:", response.status_code, response.text)
+            return False
+
         data = response.json()
-        if data.get("results", {}).get("in_database") and data["results"].get("valid"):
-            return True
-        return False
+        # This part checks if any malicious or suspicious engines flagged it
+        stats = data.get("data", {}).get("attributes", {}).get("last_analysis_stats", {})
+        malicious = stats.get("malicious", 0)
+        suspicious = stats.get("suspicious", 0)
+
+        print(f"VirusTotal scan results for {domain} ➤ Malicious: {malicious}, Suspicious: {suspicious}")
+        return malicious > 0 or suspicious > 0
     except Exception as e:
-        print("PhishTank API error", e)
+        print("VirusTotal error:", e)
         return False
-    
+
+
 
 def query_llm(email_text):
     prompt = f"""You are a cybersecurity analyst with vast experience in analyzing phishing emails. Analyze the following email and determine whether it is a phishing attempt. If it is, explain why (e.g., suspicious links, urgency, sender impersonation). If it's not phishing, explain why it appears safe.
@@ -126,7 +140,7 @@ Email content:
 def detect_phishing(email_text):
     phishing_score = 0
 
-    # Very basic detection rules
+    # some generic detection rules prior to ai integration
     if "click here" in email_text.lower():
         phishing_score += 20
     if "urgent" in email_text.lower() or "immediately" in email_text.lower():
@@ -146,7 +160,7 @@ def detect_phishing(email_text):
             phishing_score  += 20
         if not url.startswith("https://"):
             phishing_score  += 10
-    # Normalize score to 100 max
+    # score should be 100 max.
     phishing_score = min(phishing_score, 100)
 
     return phishing_score
@@ -157,34 +171,39 @@ def index():
     if request.method == 'POST':
         email_author = request.form['email_author']
         email_text = request.form.get('email_text', '').strip()
-        
-        # With browser-based OCR, we don't need server-side OCR processing anymore
-        # The text will already be in the email_text field from Tesseract.js
-        sender_domain = email_author.split('@')[-1]
-        url_to_check = f"http://{sender_domain}"
 
-        domain_flagged = check_phishtank_url(url_to_check)
-        if domain_flagged:
-            phishing_score += 50 #domain sender is in phishing DB and is high probablity to be a phishing origin
         if not email_text:
             return render_template('index.html', error="No email content provided. Please enter text or upload an image.")
 
-        conn = sqlite3.connect('history.db')
-        c = conn.cursor()
+        sender_domain = email_author.split('@')[-1]
+        virustotal_link = f"https://www.virustotal.com/gui/domain/{sender_domain}"
+        domain_flagged = check_virustotal_domain(sender_domain)            
 
+
+        # detect phishing score from content
+        phishing_score = detect_phishing(email_text)
+
+        if domain_flagged:
+            phishing_score += 50  #  if domain is flagged in virustotal's db, add 50 points to it.
+            phishing_score = min(phishing_score, 100)
+
+        # Check sender's past history
+        conn = sqlite3.connect('history.db') 
+        c = conn.cursor()
         c.execute('''
             SELECT COUNT(*) FROM emails 
             WHERE email_author = ? AND phishing_score >= 70
         ''', (email_author,))
         author_flag_count = c.fetchone()[0]
 
-        phishing_score = detect_phishing(email_text)
-        ai_explanation = query_llm(email_text)
-
         if author_flag_count >= 1:
             phishing_score += 20
             phishing_score = min(phishing_score, 100)
 
+        # Generate AI explanation
+        ai_explanation = query_llm(email_text)
+
+        # Save to DB
         c.execute('''
             INSERT INTO emails (user_id, email_author, email_text, phishing_score, timestamp)
             VALUES (?, ?, ?, ?, ?)
@@ -195,20 +214,22 @@ def index():
             phishing_score,
             datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         ))
-
         conn.commit()
         conn.close()
 
+        # Store for result page
         session['result_data'] = {
             'author': email_author,
             'email': email_text,
             'score': phishing_score,
             'flags': author_flag_count,
-            'ai_explanation': ai_explanation
+            'ai_explanation': ai_explanation,
+            'virustotal_flagged': domain_flagged,
+            'sender_domain_report': virustotal_link
         }
 
         return redirect(url_for('result'))
-    
+
     return render_template('index.html')
 
 @app.route('/result')
@@ -224,7 +245,9 @@ def result():
         email=result_data['email'],
         score=result_data['score'],
         author_flag_count=result_data['flags'],
-        ai_explanation=result_data['ai_explanation']
+        ai_explanation=result_data['ai_explanation'],
+        virustotal_flagged=result_data['virustotal_flagged'],
+        domain_report=result_data['sender_domain_report']
     )
 
 @app.route('/history')
