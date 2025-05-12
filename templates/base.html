@@ -23,7 +23,7 @@
           <ul class="navbar-nav ms-auto">
             {% if current_user.is_authenticated %}
             <li class="nav-item me-2 d-flex align-items-center text-white">
-              👤 {{ current_user.email }}
+              👤 {{ current_user.email.split('@')[0] }}
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/logout">Logout</a>
