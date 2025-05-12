@@ -75,6 +75,9 @@ content %}
 </div>
 
 <script>
+  // github script to have web ocr rendering using tesseract.js instead of having every user installing it on their local machine.
+  // when intended to use ocr, leave email body blank and just add an image.
+
   document.addEventListener("DOMContentLoaded", function () {
     const emailForm = document.getElementById("email-form");
     const emailImageInput = document.getElementById("email_image");
