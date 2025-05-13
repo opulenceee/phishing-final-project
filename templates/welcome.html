@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block title %}Welcome{% endblock %} {% block
+content %}
+<div
+  class="container d-flex justify-content-center align-items-center"
+  style="min-height: 90vh"
+>
+  <div class="card shadow w-100" style="max-width: 700px">
+    <div class="card-body text-center">
+      <h2 class="card-title mb-4">📧 Phishing Email Detection System</h2>
+
+      <p>
+        <strong>
+          This project is a web-based phishing email detection system built with
+          Flask. It allows users to:
+        </strong>
+      </p>
+      <ul class="text-start mx-auto" style="max-width: 500px">
+        <li>Submit suspicious email content for analysis</li>
+        <li>
+          Detect phishing using simple rules + optional AI (Mistral via Ollama)
+        </li>
+        <li>Check sender domains against VirusTotal</li>
+        <li>View past analysis history with timestamps</li>
+        <li>Register/login securely</li>
+      </ul>
+
+      <h5 class="mt-4">Technologies Used:</h5>
+      <ul class="text-start mx-auto" style="max-width: 500px">
+        <li>Python (Flask, sqlite3, re, requests)</li>
+        <li>Flask-Login for authentication</li>
+        <li>Bootstrap for UI</li>
+        <li>Ollama & Mistral (optional AI explanations)</li>
+        <li>VirusTotal API for domain safety</li>
+      </ul>
+
+      <h5 class="mt-4">How It Works:</h5>
+      <ol class="text-start mx-auto" style="max-width: 500px">
+        <li>User logs in or registers</li>
+        <li>Submits suspicious email content</li>
+        <li>System scores the content + calls AI (optional)</li>
+        <li>Results are displayed and stored in user history</li>
+      </ol>
+
+      <div class="mt-4">
+        <a href="{{ url_for('login') }}" class="btn btn-primary me-2">Login</a>
+        <a href="{{ url_for('register') }}" class="btn btn-outline-secondary"
+          >Register</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

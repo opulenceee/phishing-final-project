@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, session
+from flask import Flask, render_template, redirect, url_for, request, session, flash
 import sqlite3
 from datetime import datetime
 import re
@@ -11,6 +11,18 @@ from dotenv import load_dotenv
 import os
 import json
 from urllib.parse import urlparse
+import logging
+import time
+
+def setup_logger():
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(levelname)s - %(message)s'
+    )
+    return logging.getLogger()
+
+
+logger = setup_logger()
 
 load_dotenv()
 app = Flask(__name__)
@@ -166,7 +178,19 @@ def detect_phishing(email_text):
 
     return phishing_score
 
-@app.route('/', methods=['GET', 'POST'])
+
+@app.route('/welcome')
+def welcome():
+    return render_template('welcome.html')
+
+
+@app.route('/')
+def root():
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    return redirect(url_for('welcome'))
+
+@app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
     if request.method == 'POST':
@@ -276,11 +300,30 @@ def history():
     return render_template('history.html', history=emails, page=page, total_pages=total_pages)
 
 
+def is_valid_email(email):
+    return re.fullmatch(r"[^@]+@[^@]+\.[^@]+", email) is not None
+
+def is_valid_password(password):
+    has_letter = any(c.isalpha() for c in password)
+    has_digit = any(c.isdigit() for c in password)
+    return len(password) >= 8 and has_letter and has_digit
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
+
+        if "'" in email or "'" in password:
+            logger.warning(f"SQL injection attempt detected: {email}")
+            flash("Invalid email or password.")
+            return redirect('/login')
+
+        if not is_valid_email(email) or not is_valid_password(password):  
+            logger.warning(f"Invalid email or password format attempted: {email}")
+            flash("Incorrect email or password.")
+            return redirect('/register')
+        
         hashed_pw = generate_password_hash(password)
 
         conn = sqlite3.connect('history.db')
@@ -288,38 +331,81 @@ def register():
         try:
             c.execute("INSERT INTO users (email, password_hash) VALUES (?, ?)", (email, hashed_pw))
             conn.commit()
+            logger.info(f"New user registered successfully: {email}")
+            flash("Registration successful. Please login.")
+            return redirect('/login')
         except sqlite3.IntegrityError:
-            return "User already exists"
-        conn.close()
-        return redirect('/login')
+            logger.warning(f"Registration attempt with existing email: {email}")
+            flash("An account with this email already exists.")
+        finally:
+            conn.close()
     return render_template('register.html')
 
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    if 'login_attempts' not in session:
+        session['login_attempts'] = 0
+    if 'lockout_until' not in session:
+        session['lockout_until'] = 0
+
+    current_time = int(time.time())
+
+    if current_time < session['lockout_until']:
+        flash("Too many login attempts. Please wait a few minutes before trying again.")
+        return render_template('login.html')
+    
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
 
+        if "'" in email or "'" in password:
+            logger.warning(f"SQL injection attempt detected: {email}")
+            flash("Invalid email or password.")
+            return redirect('/login')
+
+        if not is_valid_email(email) or not is_valid_password(password):
+            logger.warning(f"Invalid email or password format attempted: {email}")
+            session['login_attempts'] += 1
+            flash("Incorrect email or password.")
+
+            if session['login_attempts'] >= 3:
+                session['lockout_until'] = current_time + 300 # 5 minutes timeout
+                session['login_attempts'] = 0 # reset counter
+                flash("Too many failed attempts. Please try again in 5 minutes.")
+                logger.warning(f"Lockout triggered for email: {email}")
+            return redirect('/login')
+
         conn = sqlite3.connect('history.db')
         c = conn.cursor()
-        c.execute ("SELECT id, email, password_hash FROM users WHERE email =?", (email,))
+        c.execute("SELECT id, email, password_hash FROM users WHERE email = ?", (email,))
         user = c.fetchone()
-        conn.close()
-
+            
         if user and check_password_hash(user[2], password):
             login_user(User(*user))
+            session.pop('login_attempts', None)
+            session.pop('lockout_until', None)
+            logger.info(f"User logged in successfully: {email}")
             return redirect('/')
         else:
-            return "Invalid Credentials"
+            session['login_attempts'] += 1
+            logger.warning(f"Failed login attempt for email: {email}")
+            flash("Incorrect email or password.")
+            if session['login_attempts'] >= 3:
+                session['lockout_until'] = current_time + 300
+                session['login_attempts'] = 0
+                flash("Too many failed attempts. Please try again in 5 minutes.")
+            return redirect('/login')
+        
     return render_template('login.html')
-
 
 @app.route('/logout')
 @login_required
 def logout():
+    logger.info(f"User logged out: {current_user.email}")
     logout_user()
     return redirect('/login')
 if __name__ == '__main__':
+    logger.info("Starting Flask application")
     app.run(debug=True)
 

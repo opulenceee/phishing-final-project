@@ -16,6 +16,7 @@
             class="form-control"
             id="email"
             name="email"
+            pattern="[^']+"
             required
           />
         </div>
@@ -27,6 +28,7 @@
             class="form-control"
             id="password"
             name="password"
+            pattern="[^']+"
             required
           />
         </div>
@@ -35,6 +37,26 @@
           <button type="submit" class="btn btn-primary">Login</button>
         </div>
       </form>
+      <p class="text-center mt-3">
+        Want to learn more?
+        <a href="{{ url_for('welcome') }}">Read about the system</a>
+      </p>
+      {% with messages = get_flashed_messages() %} {% if messages %} {% for
+      message in messages %}
+      <div
+        class="alert alert-warning alert-dismissible fade show mt-3"
+        role="alert"
+      >
+        {{ message }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endfor %} {% endif %} {% endwith %}
+
       <p class="text-center mt-3">
         Don't have an account?
         <a href="{{ url_for('register') }}">Register here</a>
