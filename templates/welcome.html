@@ -1,53 +1,179 @@
 {% extends "base.html" %} {% block title %}Welcome{% endblock %} {% block
 content %}
-<div
-  class="container d-flex justify-content-center align-items-center"
-  style="min-height: 90vh"
->
-  <div class="card shadow w-100" style="max-width: 700px">
-    <div class="card-body text-center">
-      <h2 class="card-title mb-4">📧 Phishing Email Detection System</h2>
+<div class="container">
+  <!-- Hero Section -->
+  <div class="text-center py-5">
+    <h1 class="display-4 mb-3">
+      <i class="fas fa-shield-alt text-primary me-2"></i>Phishing Email
+      Detection System
+    </h1>
+    <p class="lead mb-4">
+      Protect yourself from email threats with our advanced phishing detection
+      system.
+    </p>
+    <div class="mb-5">
+      <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg me-2"
+        >Get Started</a
+      >
+      <a
+        href="{{ url_for('register') }}"
+        class="btn btn-outline-secondary btn-lg"
+        >Create Account</a
+      >
+    </div>
+  </div>
 
-      <p>
-        <strong>
-          This project is a web-based phishing email detection system built with
-          Flask. It allows users to:
-        </strong>
-      </p>
-      <ul class="text-start mx-auto" style="max-width: 500px">
-        <li>Submit suspicious email content for analysis</li>
-        <li>
-          Detect phishing using simple rules + optional AI (Mistral via Ollama)
-        </li>
-        <li>Check sender domains against VirusTotal</li>
-        <li>View past analysis history with timestamps</li>
-        <li>Register/login securely</li>
-      </ul>
+  <!-- Features Grid -->
+  <div class="row g-4 py-5">
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body text-center">
+          <div class="feature-icon mb-3">
+            <i class="fas fa-robot fa-2x text-primary"></i>
+          </div>
+          <h3 class="h5 card-title">AI-Powered Analysis</h3>
+          <p class="card-text">
+            Advanced detection using Mistral AI to identify sophisticated
+            phishing attempts.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body text-center">
+          <div class="feature-icon mb-3">
+            <i class="fas fa-shield-virus fa-2x text-primary"></i>
+          </div>
+          <h3 class="h5 card-title">VirusTotal Integration</h3>
+          <p class="card-text">
+            Real-time domain safety checks against VirusTotal's extensive
+            database.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body text-center">
+          <div class="feature-icon mb-3">
+            <i class="fas fa-key fa-2x text-primary"></i>
+          </div>
+          <h3 class="h5 card-title">Secure Authentication</h3>
+          <p class="card-text">
+            Enhanced security with mandatory two-factor authentication (2FA).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <h5 class="mt-4">Technologies Used:</h5>
-      <ul class="text-start mx-auto" style="max-width: 500px">
-        <li>Python (Flask, sqlite3, re, requests)</li>
-        <li>Flask-Login for authentication</li>
-        <li>Bootstrap for UI</li>
-        <li>Ollama & Mistral (optional AI explanations)</li>
-        <li>VirusTotal API for domain safety</li>
-      </ul>
-
-      <h5 class="mt-4">How It Works:</h5>
-      <ol class="text-start mx-auto" style="max-width: 500px">
-        <li>User logs in or registers</li>
-        <li>Submits suspicious email content</li>
-        <li>System scores the content + calls AI (optional)</li>
-        <li>Results are displayed and stored in user history</li>
-      </ol>
-
-      <div class="mt-4">
-        <a href="{{ url_for('login') }}" class="btn btn-primary me-2">Login</a>
-        <a href="{{ url_for('register') }}" class="btn btn-outline-secondary"
-          >Register</a
-        >
+  <!-- How It Works Section -->
+  <div class="row py-5">
+    <div class="col-lg-6">
+      <h2 class="h3 mb-4">How It Works</h2>
+      <div class="timeline">
+        <div class="d-flex mb-3">
+          <div class="me-3">
+            <div class="badge bg-primary rounded-circle p-3">1</div>
+          </div>
+          <div>
+            <h4 class="h6">Create Your Account</h4>
+            <p class="text-muted">
+              Register and set up 2FA for enhanced security.
+            </p>
+          </div>
+        </div>
+        <div class="d-flex mb-3">
+          <div class="me-3">
+            <div class="badge bg-primary rounded-circle p-3">2</div>
+          </div>
+          <div>
+            <h4 class="h6">Submit Suspicious Emails</h4>
+            <p class="text-muted">
+              Paste email content or upload screenshots for analysis.
+            </p>
+          </div>
+        </div>
+        <div class="d-flex mb-3">
+          <div class="me-3">
+            <div class="badge bg-primary rounded-circle p-3">3</div>
+          </div>
+          <div>
+            <h4 class="h6">Get Instant Results</h4>
+            <p class="text-muted">
+              Receive detailed analysis with AI-powered insights.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <h2 class="h3 mb-4">Technologies Used</h2>
+      <div class="row g-3">
+        <div class="col-6">
+          <div class="p-3 border rounded text-center">
+            <i class="fab fa-python mb-2 fa-2x text-primary"></i>
+            <div>Python & Flask</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border rounded text-center">
+            <i class="fas fa-brain mb-2 fa-2x text-primary"></i>
+            <div>Mistral AI</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border rounded text-center">
+            <i class="fas fa-database mb-2 fa-2x text-primary"></i>
+            <div>SQLite</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border rounded text-center">
+            <i class="fas fa-shield-alt mb-2 fa-2x text-primary"></i>
+            <div>VirusTotal API</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  .feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    background: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--secondary-color)
+    );
+  }
+
+  .feature-icon i {
+    color: white;
+  }
+
+  .timeline .badge {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+</style>
 {% endblock %}

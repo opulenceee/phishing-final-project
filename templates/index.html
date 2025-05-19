@@ -4,81 +4,145 @@ content %}
 <!-- Add Tesseract.js library from CDN -->
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
 
-<div
-  class="container d-flex justify-content-center align-items-center"
-  style="min-height: 70vh"
->
-  <div class="card shadow w-100" style="max-width: 600px">
-    <div class="card-body">
-      <h3 class="card-title text-center mb-4">Analyze a Suspicious Email</h3>
-
-      <div id="loading" class="text-center my-3 d-none">
-        <div class="spinner-border text-primary" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-        <p class="mt-2" id="progress-message">Processing image...</p>
-      </div>
-
-      {% if error %}
-      <div class="alert alert-danger" role="alert">{{ error }}</div>
-      {% endif %}
-
-      <form id="email-form" method="POST" enctype="multipart/form-data">
-        <div class="mb-3">
-          <label for="email_author" class="form-label">Sender Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email_author"
-            name="email_author"
-            required
-          />
-        </div>
-
-        <div class="mb-3">
-          <label for="email_text" class="form-label">Email Content</label>
-          <textarea
-            class="form-control"
-            id="email_text"
-            name="email_text"
-            rows="6"
-            placeholder="Paste email content here (or upload a screenshot below)"
-          ></textarea>
-        </div>
-
-        <div class="mb-3">
-          <label for="email_image" class="form-label"
-            >Or Upload a Screenshot</label
-          >
-          <input
-            class="form-control"
-            type="file"
-            name="email_image"
-            id="email_image"
-            accept=".png,.jpg,.jpeg,.webp,.bmp,.tiff"
-          />
-          <div class="form-text">
-            Image text will be extracted in your browser - no server-side OCR
-            needed.
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card border-0 shadow-lg">
+        <div class="card-body p-5">
+          <div class="text-center mb-4">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-search fa-2x"></i>
+            </div>
+            <h2 class="h3">Analyze a Suspicious Email</h2>
+            <p class="text-muted">Protect yourself from potential threats</p>
           </div>
-        </div>
 
-        <div class="d-flex justify-content-center gap-3">
-          <button type="submit" class="btn btn-primary">Analyze Email</button>
-          <a href="{{ url_for('history') }}" class="btn btn-secondary">
-            View Scan History
-          </a>
+          <div id="loading" class="text-center my-3 d-none">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-2" id="progress-message">Processing image...</p>
+          </div>
+
+          {% if error %}
+          <div class="alert alert-danger" role="alert">{{ error }}</div>
+          {% endif %}
+
+          <form id="email-form" method="POST" enctype="multipart/form-data">
+            <div class="mb-4">
+              <div class="form-floating">
+                <input
+                  type="email"
+                  class="form-control form-control-lg"
+                  id="email_author"
+                  name="email_author"
+                  required
+                  placeholder="sender@example.com"
+                />
+                <label for="email_author">Sender Email</label>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="email_subject"
+                  name="email_subject"
+                  required
+                  placeholder="Email Subject"
+                />
+                <label for="email_subject">Email Subject</label>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="form-floating">
+                <textarea
+                  class="form-control form-control-lg"
+                  id="email_text"
+                  name="email_text"
+                  style="height: 150px"
+                  placeholder="Paste email content here"
+                ></textarea>
+                <label for="email_text">Email Content</label>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label for="email_image" class="form-label"
+                >Or Upload a Screenshot</label
+              >
+              <input
+                class="form-control form-control-lg"
+                type="file"
+                name="email_image"
+                id="email_image"
+                accept=".png,.jpg,.jpeg,.webp,.bmp,.tiff"
+              />
+              <div class="form-text">
+                Image text will be extracted in your browser - no server-side
+                OCR needed.
+              </div>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fas fa-search me-2"></i>Analyze Email
+              </button>
+              <a
+                href="{{ url_for('history') }}"
+                class="btn btn-outline-secondary btn-lg"
+              >
+                <i class="fas fa-history me-2"></i>View Scan History
+              </a>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </div>
+
+<style>
+  .feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    background: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--secondary-color)
+    );
+    margin: 0 auto;
+  }
+
+  .feature-icon i {
+    color: white;
+  }
+
+  .form-floating > .form-control-lg {
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+  }
+
+  .form-floating > label {
+    padding: 1rem 0.75rem;
+  }
+</style>
 
 <script>
   // github script to have web ocr rendering using tesseract.js instead of having every user installing it on their local machine.
   // when intended to use ocr, leave email body blank and just add an image.
 
   document.addEventListener("DOMContentLoaded", function () {
+    const emailAuthor = document.getElementById("email_author");
+    const emailSubject = document.getElementById("email_subject");
     const emailForm = document.getElementById("email-form");
     const emailImageInput = document.getElementById("email_image");
     const emailTextArea = document.getElementById("email_text");
@@ -104,7 +168,45 @@ content %}
         })
           .then(({ data: { text } }) => {
             // Fill textarea with extracted text
-            emailTextArea.value = text;
+
+            const lines = text.split("\n");
+            const bodyLines = [];
+            let startBody = false;
+            let from = "";
+            let subject = "";
+
+            for (let line of lines) {
+              line = line.trim();
+
+              if (/^subject:/i.test(line)) {
+                subject = line.split(/subject:/i)[1].trim();
+                continue;
+              }
+
+              if (/^from:/i.test(line)) {
+                from = line.split(/from:/i)[1].trim();
+                continue;
+              }
+
+              if (/^to:/i.test(line)) continue;
+
+              // Start collecting body when "Dear..." or similar appears
+              if (!startBody && line.match(/^(@?[\w\s]+)?dear/i)) {
+                startBody = true;
+              }
+
+              if (startBody) {
+                bodyLines.push(line);
+              }
+            }
+            emailTextArea.value = bodyLines.join("\n").trim();
+
+            if (from) emailAuthor.value = from.split(/\s+/)[0]; // First part, likely the email address
+            if (subject) {
+              const subjectInput = document.getElementById("email_subject");
+              if (subjectInput) subjectInput.value = subject;
+            }
+
             loadingDiv.classList.add("d-none");
           })
           .catch((err) => {

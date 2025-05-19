@@ -1,53 +1,107 @@
 <!-- login.html -->
 {% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
 %}
-<div
-  class="container d-flex justify-content-center align-items-center"
-  style="min-height: 70vh"
->
-  <div class="card shadow w-100" style="max-width: 450px">
-    <div class="card-body">
-      <h3 class="text-center mb-4">Login</h3>
-      <form method="POST">
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            pattern="[^']+"
-            required
-          />
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      {% if show_mfa %}
+      <div class="card border-0 shadow-lg">
+        <div class="card-body p-5">
+          <div class="text-center mb-4">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-key fa-2x"></i>
+            </div>
+            <h2 class="h3">Two-Factor Authentication</h2>
+            <p class="text-muted">Enter the code from your authenticator app</p>
+          </div>
+          <form method="POST">
+            <div class="mb-4">
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="mfa_code"
+                  name="mfa_code"
+                  placeholder="Enter 6-digit code"
+                  required
+                  pattern="[0-9]{6}"
+                />
+                <label for="mfa_code">Authentication Code</label>
+              </div>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">
+                Verify Code
+              </button>
+            </div>
+          </form>
         </div>
-
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            name="password"
-            pattern="[^']+"
-            required
-          />
+      </div>
+      {% else %}
+      <div class="card border-0 shadow-lg">
+        <div class="card-body p-5">
+          <div class="text-center mb-4">
+            <div class="feature-icon mb-3">
+              <i class="fas fa-shield-alt fa-2x"></i>
+            </div>
+            <h2 class="h3">Welcome Back</h2>
+            <p class="text-muted">Sign in to access your account</p>
+          </div>
+          <form method="POST">
+            <div class="mb-4">
+              <div class="form-floating">
+                <input
+                  type="email"
+                  class="form-control form-control-lg"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="name@example.com"
+                />
+                <label for="email">Email Address</label>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control form-control-lg"
+                  id="password"
+                  name="password"
+                  required
+                  placeholder="Password"
+                />
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary btn-lg">
+                Sign In
+              </button>
+              <a
+                href="{{ url_for('register') }}"
+                class="btn btn-outline-secondary btn-lg"
+                >Create Account</a
+              >
+            </div>
+          </form>
+          <div class="text-center mt-4">
+            <a
+              href="{{ url_for('welcome') }}"
+              class="text-muted text-decoration-none"
+            >
+              <i class="fas fa-info-circle me-1"></i>Learn more about our system
+            </a>
+          </div>
         </div>
-
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary">Login</button>
-        </div>
-      </form>
-      <p class="text-center mt-3">
-        Want to learn more?
-        <a href="{{ url_for('welcome') }}">Read about the system</a>
-      </p>
-      {% with messages = get_flashed_messages() %} {% if messages %} {% for
-      message in messages %}
+      </div>
+      {% endif %} {% with messages = get_flashed_messages() %} {% if messages %}
+      {% for message in messages %}
       <div
-        class="alert alert-warning alert-dismissible fade show mt-3"
+        class="alert alert-warning alert-dismissible fade show mt-3 shadow-sm"
         role="alert"
       >
-        {{ message }}
+        <i class="fas fa-exclamation-triangle me-2"></i>{{ message }}
         <button
           type="button"
           class="btn-close"
@@ -56,12 +110,38 @@
         ></button>
       </div>
       {% endfor %} {% endif %} {% endwith %}
-
-      <p class="text-center mt-3">
-        Don't have an account?
-        <a href="{{ url_for('register') }}">Register here</a>
-      </p>
     </div>
   </div>
 </div>
+
+<style>
+  .feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    background: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--secondary-color)
+    );
+    margin: 0 auto;
+  }
+
+  .feature-icon i {
+    color: white;
+  }
+
+  .form-floating > .form-control-lg {
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+  }
+
+  .form-floating > label {
+    padding: 1rem 0.75rem;
+  }
+</style>
 {% endblock %}
