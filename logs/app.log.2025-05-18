@@ -1,0 +1,500 @@
+2025-05-18 22:16:49,531 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-18 22:16:49,532 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-18 22:16:49,534 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:16:50,344 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:16:50,350 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:16:52,057 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:16:52] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 22:16:52,078 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:16:52] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 22:16:53,545 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:16:53] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 22:16:53,549 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:16:53] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 22:16:57,043 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:16:57] "GET /login HTTP/1.1" 200 -
+2025-05-18 22:17:04,781 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:17:04] "GET /register HTTP/1.1" 200 -
+2025-05-18 22:17:10,903 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:17:10] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-18 22:17:10,908 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:17:10] "GET /register HTTP/1.1" 200 -
+2025-05-18 22:17:18,259 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:17:18] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-18 22:17:18,266 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:17:18] "GET /register HTTP/1.1" 200 -
+2025-05-18 22:19:27,218 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:19:27,263 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:19:27,978 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:19:27,984 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:19:54,594 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-18 22:19:54,594 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-18 22:19:54,596 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:19:55,318 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:19:55,324 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:19:55,886 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:19:55] "GET /register HTTP/1.1" 200 -
+2025-05-18 22:19:56,847 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:19:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 22:19:56,857 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:19:56] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 22:19:57,604 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:19:57] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 22:19:57,607 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:19:57] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 22:19:58,567 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:19:58] "GET /register HTTP/1.1" 200 -
+2025-05-18 22:20:04,466 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:20:04] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-18 22:20:04,530 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:20:04] "GET /complete-mfa-setup HTTP/1.1" 200 -
+2025-05-18 22:20:24,621 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:20:24] "[32mPOST /verify-initial-mfa HTTP/1.1[0m" 302 -
+2025-05-18 22:20:24,629 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:20:24] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:20:27,277 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:20:27] "[33mGET /setup-mfa HTTP/1.1[0m" 404 -
+2025-05-18 22:21:59,282 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:21:59] "[33mGET /setup-mfa HTTP/1.1[0m" 404 -
+2025-05-18 22:24:38,003 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-18 22:24:38,004 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-18 22:24:38,005 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:24:38,681 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:24:38,686 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:24:39,802 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:24:39] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 22:24:39,816 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:24:39] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:24:42,965 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:24:42] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-18 22:24:42,973 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:24:42] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 22:24:44,295 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:24:44] "GET /login HTTP/1.1" 200 -
+2025-05-18 22:24:51,101 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:24:51] "POST /login HTTP/1.1" 200 -
+2025-05-18 22:24:59,945 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:24:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-18 22:24:59,949 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:24:59] "GET /login HTTP/1.1" 200 -
+2025-05-18 22:25:48,474 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:25:48,525 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:25:49,278 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:25:49,285 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:26:17,651 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:26:17,699 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:26:18,422 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:26:18,428 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:26:23,784 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-18 22:26:23,784 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-18 22:26:23,786 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:26:24,508 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:26:24,516 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:26:24,560 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 22:26:24,575 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:24] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 22:26:25,598 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:25] "GET /login HTTP/1.1" 200 -
+2025-05-18 22:26:27,619 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 22:26:27,626 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:27] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 22:26:27,789 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 22:26:27,795 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:27] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 22:26:28,734 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:28] "GET /login HTTP/1.1" 200 -
+2025-05-18 22:26:31,824 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:31] "POST /login HTTP/1.1" 200 -
+2025-05-18 22:26:41,622 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-18 22:26:41,629 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:41] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:26:43,336 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:43] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-18 22:26:43,341 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:43] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 22:26:44,202 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:44] "GET /login HTTP/1.1" 200 -
+2025-05-18 22:26:47,953 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:47] "POST /login HTTP/1.1" 200 -
+2025-05-18 22:26:51,658 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-18 22:26:51,663 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:26:51] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:28:38,088 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:28:38,130 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:28:38,869 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:28:38,875 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:28:46,025 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:28:46] "[32mGET /complete-mfa-setup HTTP/1.1[0m" 302 -
+2025-05-18 22:28:46,040 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:28:46] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:28:50,191 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:28:50] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 22:28:54,741 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:28:54] "GET /history HTTP/1.1" 200 -
+2025-05-18 22:28:57,480 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:28:57] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:29:00,596 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:29:00] "GET /history HTTP/1.1" 200 -
+2025-05-18 22:29:31,875 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:29:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 22:29:31,885 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:29:31] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:30:30,063 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:30:30] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:30:31,094 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:30:31] "[35m[1mGET /history HTTP/1.1[0m" 500 -
+2025-05-18 22:30:31,115 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:30:31] "GET /history?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-18 22:30:31,134 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:30:31] "GET /history?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-18 22:30:31,161 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:30:31] "GET /history?__debugger__=yes&cmd=resource&f=console.png&s=N1yMHMsPCpQkdxlsxr2m HTTP/1.1" 200 -
+2025-05-18 22:30:31,173 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:30:31] "GET /history?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-18 22:31:24,768 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:31:24,814 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:31:25,494 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:31:25,500 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:31:33,133 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:31:33] "GET /history HTTP/1.1" 200 -
+2025-05-18 22:31:38,646 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:31:38] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:31:39,725 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:31:39] "GET /history HTTP/1.1" 200 -
+2025-05-18 22:31:40,556 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:31:40] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:31:41,536 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:31:41] "GET /history HTTP/1.1" 200 -
+2025-05-18 22:31:42,210 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:31:42] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:31:59,304 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:31:59] "[32mPOST /index HTTP/1.1[0m" 302 -
+2025-05-18 22:31:59,333 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:31:59] "[35m[1mGET /result HTTP/1.1[0m" 500 -
+2025-05-18 22:31:59,361 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:31:59] "GET /result?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-18 22:31:59,361 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:31:59] "GET /result?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-18 22:31:59,373 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:31:59] "GET /result?__debugger__=yes&cmd=resource&f=console.png&s=bv8N5nMwOQYjtCLMTcgX HTTP/1.1" 200 -
+2025-05-18 22:31:59,382 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:31:59] "GET /result?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-18 22:32:31,278 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:32:31,336 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:32:32,045 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:32:32,052 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:32:52,192 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:32:52] "[35m[1mGET /result HTTP/1.1[0m" 500 -
+2025-05-18 22:32:52,215 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:32:52] "[36mGET /result?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-18 22:32:52,218 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:32:52] "[36mGET /result?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-18 22:32:52,232 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:32:52] "GET /result?__debugger__=yes&cmd=resource&f=console.png&s=ILmLyfT93PtjJ79VFMjT HTTP/1.1" 200 -
+2025-05-18 22:32:52,241 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:32:52] "[36mGET /result?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-18 22:33:27,735 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:33:27,777 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:33:28,509 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:33:28,515 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:34:18,110 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:34:18,150 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:34:18,878 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:34:18,884 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:34:19,489 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:34:19] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:34:40,702 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:34:40] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:35:34,744 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:35:34] "[32mPOST /index HTTP/1.1[0m" 302 -
+2025-05-18 22:35:34,751 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:35:34] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:37:01,887 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:37:01,943 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:37:02,825 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:37:02,831 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:37:58,462 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:37:58,534 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:37:59,434 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:37:59,441 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:38:00,783 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:38:00] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:38:41,962 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:38:42,005 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:38:42,743 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:38:42,749 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:39:40,432 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:39:40,489 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:39:41,203 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:39:41,208 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:42:11,900 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:42:11] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:42:39,489 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:42:39] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:42:59,136 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:42:59] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:43:06,930 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:43:06] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:45:08,123 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:45:08] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:46:05,378 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:46:05] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:48:01,335 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:48:01,385 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:48:02,199 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:48:02,205 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:48:25,476 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:48:25,519 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:48:26,226 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:48:26,232 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:48:37,944 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:48:37] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:48:39,399 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:48:39,448 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:48:40,190 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:48:40,196 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:48:40,693 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:48:40] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:48:42,456 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:48:42] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:48:43,456 - root - WARNING - Author authenticationmail@trust.ameribank7.com was previously flagged for phishing
+2025-05-18 22:49:03,014 - root - WARNING - AI model detected phishing patterns in the email
+2025-05-18 22:49:03,019 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:49:03] "[32mPOST /index HTTP/1.1[0m" 302 -
+2025-05-18 22:49:03,026 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:49:03] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:49:53,072 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:49:53,118 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:49:53,833 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-18 22:49:53,851 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:49:53,856 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:50:34,368 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:50:34,411 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:50:35,164 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:50:35,170 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:50:48,340 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:50:48,381 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:50:49,107 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:50:49,113 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:50:57,213 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:50:57,274 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:50:58,004 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:50:58,010 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:51:15,187 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:51:15,260 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:51:16,041 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:51:16,048 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:51:21,855 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:51:21] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:51:43,356 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:51:43] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-18 22:51:43,364 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:51:43] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 22:51:44,620 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:51:44] "GET /login HTTP/1.1" 200 -
+2025-05-18 22:51:50,964 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:51:50] "POST /login HTTP/1.1" 200 -
+2025-05-18 22:51:55,434 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:51:55] "POST /login HTTP/1.1" 200 -
+2025-05-18 22:52:07,948 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:52:07] "POST /login HTTP/1.1" 200 -
+2025-05-18 22:52:14,015 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:52:14] "POST /login HTTP/1.1" 200 -
+2025-05-18 22:52:30,657 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:52:30] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-18 22:52:30,663 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:52:30] "GET /index HTTP/1.1" 200 -
+2025-05-18 22:52:36,755 - root - WARNING - Author authenticationmail@trust.ameribank7.com was previously flagged for phishing
+2025-05-18 22:52:44,613 - root - WARNING - AI model detected phishing patterns in the email
+2025-05-18 22:52:44,617 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:52:44] "[32mPOST /index HTTP/1.1[0m" 302 -
+2025-05-18 22:52:44,623 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:52:44] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:53:48,846 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:53:48,893 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:53:49,632 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:53:49,638 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:53:52,921 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:53:52] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:54:29,066 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:54:29,108 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:54:29,851 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:54:29,857 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:55:01,194 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:55:01,239 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:55:02,022 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:55:02,028 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:55:06,094 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:55:06,152 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:55:06,966 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:55:06,974 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:55:07,002 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:55:07] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:55:24,798 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:55:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-18 22:55:32,253 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:55:32,313 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:55:33,097 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:55:33,103 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:55:43,212 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:55:43,255 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:55:43,988 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:55:43,993 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:55:48,502 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:55:48] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:56:30,563 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:56:30,639 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:56:31,446 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:56:31,452 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:58:45,014 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:58:45,078 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:58:45,885 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:58:45,891 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:58:47,760 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:58:47] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:59:32,267 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:59:32] "GET /result HTTP/1.1" 200 -
+2025-05-18 22:59:40,518 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 22:59:40,568 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 22:59:41,309 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 22:59:41,315 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 22:59:42,841 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 22:59:42] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:00:43,126 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:00:43,169 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:00:43,904 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:00:43,910 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:00:45,942 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:00:45,993 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:00:46,812 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:00:46,819 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:00:48,097 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:00:48] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:00:53,913 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:00:53,959 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:00:54,724 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:00:54,730 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:01:15,000 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:01:15,049 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:01:15,819 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:01:15,825 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:01:21,973 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:01:21] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:01:51,272 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:01:51,317 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:01:52,088 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:01:52,095 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:01:52,680 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:01:52] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:01:56,154 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:01:56,195 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:01:56,913 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:01:56,919 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:06:35,144 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:06:35,189 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:06:35,988 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:06:35,995 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:06:54,233 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:06:54,280 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:06:55,059 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:06:55,065 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:06:59,615 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:06:59] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:07:28,471 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:07:28,512 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:07:29,249 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:07:29,255 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:08:29,044 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:08:29,086 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:08:29,881 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:08:29,888 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:08:34,456 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:08:34] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:09:37,698 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:09:37,789 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:09:38,606 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:09:38,613 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:09:39,644 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:09:39,686 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:09:40,406 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:09:40,412 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:11:21,677 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:11:21,718 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:11:22,408 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:11:22,414 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:11:41,130 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:11:41] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:13:13,752 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:13:13,824 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:13:14,549 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:13:14,555 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:13:20,634 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:13:20,680 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:13:21,390 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:13:21,396 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:13:35,563 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:13:35,605 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:13:36,316 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:13:36,321 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:13:42,400 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:13:42,442 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:13:43,142 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:13:43,148 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:15:36,522 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:15:36,563 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:15:37,268 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:15:37,275 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:16:17,476 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:16:17] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:16:32,858 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:16:32,898 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:16:33,586 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:16:33,592 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:16:39,674 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:16:39,715 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:16:40,425 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:16:40,431 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:16:51,015 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:16:51] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 23:16:51,032 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:16:51] "GET /index HTTP/1.1" 200 -
+2025-05-18 23:17:22,886 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:17:22,936 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:17:23,656 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:17:23,662 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:17:41,875 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:17:41,920 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:17:42,757 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:17:42,763 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:18:02,998 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:18:03,038 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:18:03,728 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:18:03,734 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:18:06,845 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:18:06] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:18:28,100 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-18 23:18:28,101 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-18 23:18:28,103 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:18:28,852 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:18:28,859 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:18:58,195 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-18 23:18:58,196 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-18 23:18:58,197 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:18:58,880 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:18:58,886 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:19:02,364 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:19:02] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 23:19:02,382 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:19:02] "GET /index HTTP/1.1" 200 -
+2025-05-18 23:19:11,341 - root - WARNING - Author authenticationmail@trust.ameribank7.com was previously flagged for phishing
+2025-05-18 23:19:11,341 - root - INFO - Making request to Ollama API...
+2025-05-18 23:19:17,600 - root - INFO - Ollama API response status: 200
+2025-05-18 23:19:24,137 - root - INFO - Final LLM Response: Phishing: Yes
+   Explanation:
+- **Suspicious sender email address**: The sender's email address is not associated with a well-known and trusted bank, "trust.ameribank7.com" does not appear to be the official domain of Bank America.
+- **Request for sensitive information**: The email asks the recipient to reset their password through a provided link, which could potentially allow the attacker to gain access to the account.
+- **Suspicious link**: The link provided in the email contains suspicious characters and a domain that does not appear to be associated with Bank America.
+- **Urgency or scare tactics**: The message implies immediate action is needed by stating "If this was not you, please reset your password immediately."
+2025-05-18 23:19:24,138 - root - WARNING - AI model detected phishing patterns in the email
+2025-05-18 23:19:24,143 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:19:24] "[32mPOST /index HTTP/1.1[0m" 302 -
+2025-05-18 23:19:24,159 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:19:24] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:19:42,518 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:19:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-18 23:20:26,896 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:20:27,249 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:20:27,305 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:20:28,016 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-18 23:20:28,033 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:20:28,039 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:20:35,138 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:20:35,183 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:20:35,882 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-18 23:20:35,899 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:20:35,905 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:21:35,428 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:22:40,748 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-18 23:22:40,771 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-18 23:22:40,771 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-18 23:22:40,773 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:22:41,524 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-18 23:22:41,544 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:22:41,550 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:22:48,098 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:22:48] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 23:22:48,114 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:22:48] "GET /index HTTP/1.1" 200 -
+2025-05-18 23:22:50,544 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:22:50] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 23:22:50,550 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:22:50] "GET /index HTTP/1.1" 200 -
+2025-05-18 23:22:54,271 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:22:54] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-18 23:22:54,279 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:22:54] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 23:22:57,416 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-18 23:22:57,439 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-18 23:22:57,439 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-18 23:22:57,441 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:23:01,780 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-18 23:23:01,804 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-18 23:23:01,804 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-18 23:23:01,806 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:23:02,542 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-18 23:23:02,561 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:23:02,567 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:23:06,662 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:23:06] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 23:23:06,669 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:23:06] "GET /welcome HTTP/1.1" 200 -
+2025-05-18 23:23:09,437 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:23:09] "GET /login HTTP/1.1" 200 -
+2025-05-18 23:23:13,353 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:23:13] "POST /login HTTP/1.1" 200 -
+2025-05-18 23:23:19,048 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:23:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-18 23:23:19,053 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:23:19] "GET /index HTTP/1.1" 200 -
+2025-05-18 23:23:24,382 - root - WARNING - Author authenticationmail@trust.ameribank7.com was previously flagged for phishing
+2025-05-18 23:23:24,382 - root - INFO - USE_LOCAL_AI is True, calling query_llm...
+2025-05-18 23:23:24,382 - root - INFO - Making request to Ollama API...
+2025-05-18 23:23:26,586 - root - INFO - Ollama API response status: 200
+2025-05-18 23:23:33,431 - root - INFO - Final LLM Response: Phishing: Yes
+Explanation:
+- **Suspicious sender email address**: The sender's email address is not associated with a well-known and trusted bank (Bank America). The actual domain for Bank of America would be something like "@bankofamerica.com".
+- **Request for sensitive information**: The email asks the recipient to reset their password through a provided link, which could potentially expose the account holder's credentials.
+- **Suspicious link**: The link provided in the email contains suspicious characters (the question mark "?") and an inconsistent domain name (".ameribank7").
+- **Urgency or scare tactics**: The message implies immediate action is needed to secure the account due to unauthorized login and transactions.
+2025-05-18 23:23:33,432 - root - INFO - Got AI explanation: Phishing: Yes
+Explanation:
+- **Suspicious sender email address**: The sender's email address is not associated with a well-known and trusted bank (Bank America). The actual domain for Bank of America would be something like "@bankofamerica.com".
+- **Request for sensitive information**: The email asks the recipient to reset their password through a provided link, which could potentially expose the account holder's credentials.
+- **Suspicious link**: The link provided in the email contains suspicious characters (the question mark "?") and an inconsistent domain name (".ameribank7").
+- **Urgency or scare tactics**: The message implies immediate action is needed to secure the account due to unauthorized login and transactions.
+2025-05-18 23:23:33,433 - root - WARNING - AI model detected phishing patterns in the email
+2025-05-18 23:23:33,437 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:23:33] "[32mPOST /index HTTP/1.1[0m" 302 -
+2025-05-18 23:23:33,453 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:23:33] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:23:46,968 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:23:47,052 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:23:47,826 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-18 23:23:47,843 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:23:47,850 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:24:31,574 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-18 23:24:31,596 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-18 23:24:31,596 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-18 23:24:31,598 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:24:32,292 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-18 23:24:32,309 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:24:32,315 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-18 23:24:39,285 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:24:39] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-18 23:24:39,302 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:24:39] "GET /index HTTP/1.1" 200 -
+2025-05-18 23:24:48,408 - root - WARNING - Author authenticationmail@trust.ameribank7.com was previously flagged for phishing
+2025-05-18 23:24:48,408 - root - INFO - USE_LOCAL_AI is True, calling query_llm...
+2025-05-18 23:24:48,408 - root - INFO - Making request to Ollama API...
+2025-05-18 23:24:50,607 - root - INFO - Ollama API response status: 200
+2025-05-18 23:24:56,000 - root - INFO - Final LLM Response: Phishing: Yes
+Explanation:
+- **Suspicious sender email address**: The domain name "ameribank7.com" is not associated with Bank America, a well-known and trusted bank.
+- **Request for sensitive information**: The email asks the recipient to reset their password through a provided link.
+- **Suspicious link**: The link provided in the email contains suspicious characters (the question mark) which can be used for URL manipulation or redirects.
+- **Urgency or scare tactics**: The message implies immediate action is needed due to "recent login to your bank account" and "4 new transactions have been made".
+2025-05-18 23:24:56,002 - root - INFO - Got AI explanation: Phishing: Yes
+Explanation:
+- **Suspicious sender email address**: The domain name "ameribank7.com" is not associated with Bank America, a well-known and trusted bank.
+- **Request for sensitive information**: The email asks the recipient to reset their password through a provided link.
+- **Suspicious link**: The link provided in the email contains suspicious characters (the question mark) which can be used for URL manipulation or redirects.
+- **Urgency or scare tactics**: The message implies immediate action is needed due to "recent login to your bank account" and "4 new transactions have been made".
+2025-05-18 23:24:56,003 - root - WARNING - AI model detected phishing patterns in the email
+2025-05-18 23:24:56,007 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:24:56] "[32mPOST /index HTTP/1.1[0m" 302 -
+2025-05-18 23:24:56,021 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:24:56] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:27:43,347 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:27:43] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:28:58,314 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:28:58] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:29:41,362 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:29:41] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:29:55,473 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:29:55] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:30:11,048 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:30:11] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:31:20,915 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:31:20] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:31:21,748 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:31:21] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:31:55,456 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:31:55] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:32:03,827 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:32:03] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:32:12,389 - werkzeug - INFO - 127.0.0.1 - - [18/May/2025 23:32:12] "GET /result HTTP/1.1" 200 -
+2025-05-18 23:36:57,949 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-18 23:36:57,999 - werkzeug - INFO -  * Restarting with stat
+2025-05-18 23:36:58,811 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-18 23:36:58,829 - werkzeug - WARNING -  * Debugger is active!
+2025-05-18 23:36:58,835 - werkzeug - INFO -  * Debugger PIN: 140-668-183

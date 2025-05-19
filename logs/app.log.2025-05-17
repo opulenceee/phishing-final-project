@@ -1,0 +1,409 @@
+2025-05-17 12:03:42,921 - root - INFO - Starting Flask application
+2025-05-17 12:03:42,959 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-17 12:03:42,959 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-17 12:03:42,961 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 12:03:43,484 - root - INFO - Starting Flask application
+2025-05-17 12:03:43,497 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 12:03:43,504 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 12:03:47,703 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:03:47] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 12:03:47,733 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:03:47] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 12:03:48,180 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:03:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-17 12:06:07,489 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:06:07] "GET /login HTTP/1.1" 200 -
+2025-05-17 12:06:09,240 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:06:09] "GET /register HTTP/1.1" 200 -
+2025-05-17 12:06:16,849 - root - WARNING - Invalid email or password format attempted: nivfaybosh@gmail.com
+2025-05-17 12:06:16,850 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:06:16] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-17 12:06:16,853 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:06:16] "GET /register HTTP/1.1" 200 -
+2025-05-17 12:06:28,402 - root - INFO - New user registered successfully: nivfaybosh@gmail.com
+2025-05-17 12:06:28,402 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:06:28] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-17 12:06:28,408 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:06:28] "GET /login HTTP/1.1" 200 -
+2025-05-17 12:08:30,666 - root - INFO - User logged in successfully: nivfaybosh@gmail.com
+2025-05-17 12:08:32,631 - root - INFO - User logged in successfully: nivfaybosh@gmail.com
+2025-05-17 12:08:46,317 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:08:46] "GET /login HTTP/1.1" 200 -
+2025-05-17 12:08:46,568 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:08:46] "GET /login HTTP/1.1" 200 -
+2025-05-17 12:08:47,945 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:08:47] "GET /login HTTP/1.1" 200 -
+2025-05-17 12:08:50,736 - root - INFO - User logged in successfully: nivfaybosh@gmail.com
+2025-05-17 12:09:14,007 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:09:14] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 12:09:38,545 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:09:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-17 12:09:38,556 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:09:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-17 12:09:38,560 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:09:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-17 12:09:41,972 - root - INFO - Starting Flask application
+2025-05-17 12:09:41,993 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-17 12:09:41,993 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-17 12:09:41,995 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 12:09:42,518 - root - INFO - Starting Flask application
+2025-05-17 12:09:42,533 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 12:09:42,539 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 12:09:43,179 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:09:43] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 12:09:43,190 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:09:43] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 12:09:44,809 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:09:44] "GET /login HTTP/1.1" 200 -
+2025-05-17 12:09:50,040 - root - INFO - User logged in successfully: nivfaybosh@gmail.com
+2025-05-17 12:09:50,040 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:09:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-17 12:09:50,044 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:09:50] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 12:09:50,050 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:09:50] "GET /index HTTP/1.1" 200 -
+2025-05-17 12:11:15,033 - root - INFO - User logged out: nivfaybosh@gmail.com
+2025-05-17 12:11:15,033 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:11:15] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-17 12:11:15,037 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:11:15] "GET /login HTTP/1.1" 200 -
+2025-05-17 12:11:20,308 - root - INFO - User logged in successfully: nivfaybosh@gmail.com
+2025-05-17 12:11:20,309 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:11:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-17 12:11:20,313 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:11:20] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 12:11:20,317 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:11:20] "GET /index HTTP/1.1" 200 -
+2025-05-17 12:12:16,367 - root - INFO - VirusTotal: Domain 'm1crosoft-account-support.com' not found in database.
+2025-05-17 12:12:20,671 - root - WARNING - No AI phishing match found for security@m1crosoft-account-support.com
+2025-05-17 12:12:20,675 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:12:20] "[32mPOST /index HTTP/1.1[0m" 302 -
+2025-05-17 12:12:20,686 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:12:20] "GET /result HTTP/1.1" 200 -
+2025-05-17 12:13:07,336 - root - INFO - Checking VirusTotal for domain: m1crosoft-account-support.com ➤ Malicious: 0, Suspicious: 0
+2025-05-17 12:13:18,286 - root - INFO - AI confirmed phishing for security@m1crosoft-account-support.com
+2025-05-17 12:13:18,289 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:13:18] "[32mPOST /index HTTP/1.1[0m" 302 -
+2025-05-17 12:13:18,296 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:13:18] "GET /result HTTP/1.1" 200 -
+2025-05-17 12:15:07,588 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:15:07] "GET /history HTTP/1.1" 200 -
+2025-05-17 12:15:45,756 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:15:45] "GET /index HTTP/1.1" 200 -
+2025-05-17 12:16:49,616 - root - INFO - Checking VirusTotal for domain: trust.ameribank7.com ➤ Malicious: 0, Suspicious: 0
+2025-05-17 12:16:58,630 - root - INFO - AI confirmed phishing for authenticationmail@trust.ameribank7.com
+2025-05-17 12:17:01,181 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:17:01] "[32mPOST /index HTTP/1.1[0m" 302 -
+2025-05-17 12:17:01,214 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 12:17:01] "GET /result HTTP/1.1" 200 -
+2025-05-17 23:02:07,888 - root - INFO - Starting Flask application
+2025-05-17 23:02:07,924 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-17 23:02:07,925 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-17 23:02:07,927 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:02:08,524 - root - INFO - Starting Flask application
+2025-05-17 23:02:08,540 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:02:08,547 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:02:12,794 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:12] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:02:12,809 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:12] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:02:12,824 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:12] "[33mGET /static/css/custom.css HTTP/1.1[0m" 404 -
+2025-05-17 23:02:18,479 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:18] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:02:18,485 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:18] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:02:18,499 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:18] "[33mGET /static/css/custom.css HTTP/1.1[0m" 404 -
+2025-05-17 23:02:29,722 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:29] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:02:29,729 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:29] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:02:29,738 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:29] "[33mGET /static/css/custom.css HTTP/1.1[0m" 404 -
+2025-05-17 23:02:40,755 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:40] "[33mGET /welcoem HTTP/1.1[0m" 404 -
+2025-05-17 23:02:43,767 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:43] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:02:43,785 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:43] "[33mGET /static/css/custom.css HTTP/1.1[0m" 404 -
+2025-05-17 23:02:47,612 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:47] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:02:47,631 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:02:47] "[33mGET /static/css/custom.css HTTP/1.1[0m" 404 -
+2025-05-17 23:03:52,484 - root - INFO - Starting Flask application
+2025-05-17 23:03:52,505 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-17 23:03:52,505 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-17 23:03:52,507 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:03:53,032 - root - INFO - Starting Flask application
+2025-05-17 23:03:53,047 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:03:53,052 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:03:54,708 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:03:54] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:03:54,730 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:03:54] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:03:56,709 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:03:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:03:56,713 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:03:56] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:03:57,722 - root - INFO - User logged out: nivfaybosh@gmail.com
+2025-05-17 23:03:57,723 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:03:57] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-17 23:03:57,729 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:03:57] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:03:58,696 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:03:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:03:58,704 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:03:58] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:10:20,310 - root - INFO - Starting Flask application
+2025-05-17 23:10:20,329 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-17 23:10:20,329 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-17 23:10:20,331 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:10:20,855 - root - INFO - Starting Flask application
+2025-05-17 23:10:20,870 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:10:20,876 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:10:22,098 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:10:22,167 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:22] "[35m[1mGET /welcome HTTP/1.1[0m" 500 -
+2025-05-17 23:10:22,691 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:10:22,713 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:22] "[35m[1mGET /welcome HTTP/1.1[0m" 500 -
+2025-05-17 23:10:22,763 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:22] "GET /welcome?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-17 23:10:22,769 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:22] "GET /welcome?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-17 23:10:22,803 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:22] "GET /welcome?__debugger__=yes&cmd=resource&f=console.png&s=sZFkn7jR5ibijA9ErxW4 HTTP/1.1" 200 -
+2025-05-17 23:10:22,816 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:22] "GET /welcome?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-17 23:10:41,803 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:41] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:10:45,886 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:45] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:10:46,644 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:46] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:10:47,335 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:47] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:10:48,200 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:48] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:10:48,206 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:48] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:10:49,568 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:49] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:10:53,228 - root - WARNING - Failed login attempt for email: benbichler2@gmail.com
+2025-05-17 23:10:53,229 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-17 23:10:53,233 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:53] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:10:58,123 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:58] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:10:59,654 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:10:59] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:11:05,858 - root - INFO - User logged in successfully: nivfaybosh@gmail.com
+2025-05-17 23:11:05,859 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:11:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-17 23:11:05,863 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:11:05] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:11:05,868 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:11:05] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:11:09,723 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:11:09] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:11:11,026 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:11:11] "GET /history HTTP/1.1" 200 -
+2025-05-17 23:11:11,995 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:11:11] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:11:15,303 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:11:15] "GET /history HTTP/1.1" 200 -
+2025-05-17 23:11:18,879 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:11:18] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:13:14,713 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:13:14] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:13:23,037 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:13:23] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:13:26,047 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:13:26] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:13:27,050 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:13:27] "GET /history HTTP/1.1" 200 -
+2025-05-17 23:13:27,814 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:13:27] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:13:29,018 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:13:29] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:13:29,024 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:13:29] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:14:28,438 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:28] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:14:29,086 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:29] "GET /history HTTP/1.1" 200 -
+2025-05-17 23:14:29,643 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:29] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:14:30,896 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:30] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:14:30,901 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:30] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:14:32,524 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:32] "GET /history HTTP/1.1" 200 -
+2025-05-17 23:14:35,303 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:35] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:14:35,309 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:35] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:14:35,572 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:35] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:14:35,579 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:35] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:14:38,059 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:38] "GET /history HTTP/1.1" 200 -
+2025-05-17 23:14:40,232 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:40] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:14:40,239 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:14:40] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:15:11,542 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:15:11] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:15:12,697 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:15:12] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:15:14,452 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:15:14] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:15:15,183 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:15:15] "GET /history HTTP/1.1" 200 -
+2025-05-17 23:15:15,655 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:15:15] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:15:16,308 - root - INFO - User logged out: nivfaybosh@gmail.com
+2025-05-17 23:15:16,308 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:15:16] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-17 23:15:16,314 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:15:16] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:15:17,253 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:15:17] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:15:29,178 - root - INFO - User logged in successfully: nivfaybosh@gmail.com
+2025-05-17 23:15:29,179 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:15:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-17 23:15:29,182 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:15:29] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:15:29,186 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:15:29] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:16:07,855 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:16:07] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:16:07,862 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:16:07] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:16:09,049 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:16:09] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:16:09,479 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:16:09] "GET /history HTTP/1.1" 200 -
+2025-05-17 23:16:10,836 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:16:10] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:16:24,844 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:16:24] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:16:48,863 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:16:48] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:16:51,246 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:16:51] "GET /history HTTP/1.1" 200 -
+2025-05-17 23:16:51,673 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:16:51] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:16:52,290 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:16:52] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:16:52,296 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:16:52] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:17:09,136 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:17:09] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:17:15,635 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:17:15] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:17:35,684 - root - INFO - AI confirmed phishing for benbichler2@gmail.com
+2025-05-17 23:17:35,689 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:17:35] "[32mPOST /index HTTP/1.1[0m" 302 -
+2025-05-17 23:17:35,702 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:17:35] "GET /result HTTP/1.1" 200 -
+2025-05-17 23:18:10,124 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:18:10] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:18:11,141 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:18:11] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:18:11,514 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:18:11] "GET /history HTTP/1.1" 200 -
+2025-05-17 23:20:27,579 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:20:27,619 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:22:58,476 - root - INFO - Starting Flask application
+2025-05-17 23:22:58,495 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-17 23:22:58,495 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-17 23:22:58,497 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:22:59,228 - root - INFO - Starting Flask application
+2025-05-17 23:22:59,242 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:22:59,248 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:23:01,191 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:23:01] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:23:01,205 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:23:01] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:23:02,411 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:23:02] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:23:02,417 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:23:02] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:23:03,198 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:23:03] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:23:03,206 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:23:03] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:23:05,009 - root - INFO - User logged out: nivfaybosh@gmail.com
+2025-05-17 23:23:05,010 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:23:05] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-17 23:23:05,019 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:23:05] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:23:09,910 - root - WARNING - Failed login attempt for email: benbichler2@gmail.com
+2025-05-17 23:23:09,911 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:23:09] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-17 23:23:09,915 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:23:09] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:24:04,126 - root - INFO - User logged in successfully: nivfaybosh@gmail.com
+2025-05-17 23:24:04,127 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:24:04] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-17 23:24:04,131 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:24:04] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:24:04,135 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:24:04] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:24:09,041 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:24:09] "[35m[1mGET /profile HTTP/1.1[0m" 500 -
+2025-05-17 23:24:09,064 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:24:09] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-17 23:24:09,067 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:24:09] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-17 23:24:09,096 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:24:09] "GET /profile?__debugger__=yes&cmd=resource&f=console.png&s=sFiUkaDVRB6urCzHd2aL HTTP/1.1" 200 -
+2025-05-17 23:24:09,108 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:24:09] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-17 23:24:26,305 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:24:26,353 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:24:26,914 - root - INFO - Starting Flask application
+2025-05-17 23:24:26,928 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:24:26,934 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:24:29,984 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:24:30,015 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:24:30,598 - root - INFO - Starting Flask application
+2025-05-17 23:24:30,614 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:24:30,620 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:24:48,865 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:24:48,901 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:24:49,478 - root - INFO - Starting Flask application
+2025-05-17 23:24:49,492 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:24:49,498 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:25:29,008 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:25:29,042 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:25:29,647 - root - INFO - Starting Flask application
+2025-05-17 23:25:29,661 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:25:29,668 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:25:35,759 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:25:35,792 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:25:36,380 - root - INFO - Starting Flask application
+2025-05-17 23:25:36,394 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:25:36,400 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:25:52,958 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:25:52] "[33mGET /profile HTTP/1.1[0m" 404 -
+2025-05-17 23:25:57,251 - root - INFO - User logged in successfully: nivfaybosh@gmail.com
+2025-05-17 23:25:57,252 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:25:57] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-17 23:25:57,257 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:25:57] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:25:57,268 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:25:57] "GET /index HTTP/1.1" 200 -
+2025-05-17 23:25:58,762 - root - INFO - User logged out: nivfaybosh@gmail.com
+2025-05-17 23:25:58,763 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:25:58] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-17 23:25:58,771 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:25:58] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:30:05,585 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:30:05,621 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:30:06,339 - root - INFO - Starting Flask application
+2025-05-17 23:30:06,354 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:30:06,360 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:32:10,779 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:32:10,828 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:32:11,545 - root - INFO - Starting Flask application
+2025-05-17 23:32:11,561 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:32:11,567 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:34:35,113 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:34:35,154 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:34:35,874 - root - INFO - Starting Flask application
+2025-05-17 23:34:35,889 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:34:35,895 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:34:40,606 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:40] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:34:40,619 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:40] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:34:42,421 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:42] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:34:48,167 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:48] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-05-17 23:34:48,184 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:48] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-17 23:34:48,185 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:48] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-17 23:34:48,191 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:48] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=F75fj6167husoDPVQS2l HTTP/1.1" 200 -
+2025-05-17 23:34:48,203 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:48] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-17 23:34:52,400 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:52] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:34:55,951 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:55] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2025-05-17 23:34:55,967 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:55] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-17 23:34:55,968 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:55] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-17 23:34:55,974 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:55] "GET /register?__debugger__=yes&cmd=resource&f=console.png&s=F75fj6167husoDPVQS2l HTTP/1.1" 200 -
+2025-05-17 23:34:55,984 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:34:55] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-17 23:35:47,653 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:35:47,698 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:35:48,366 - root - INFO - Starting Flask application
+2025-05-17 23:35:48,380 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:35:48,386 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:35:56,497 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:35:56,540 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:35:57,269 - root - INFO - Starting Flask application
+2025-05-17 23:35:57,285 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:35:57,292 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:35:59,326 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:35:59,365 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:36:00,044 - root - INFO - Starting Flask application
+2025-05-17 23:36:00,058 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:36:00,064 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:36:05,125 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:36:05,166 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:36:05,882 - root - INFO - Starting Flask application
+2025-05-17 23:36:05,898 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:36:05,905 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:36:09,612 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:36:09] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2025-05-17 23:36:09,631 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:36:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-17 23:36:09,632 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:36:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-17 23:36:09,678 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:36:09] "GET /register?__debugger__=yes&cmd=resource&f=console.png&s=rYzwf2LFHQvsYIfytJ3h HTTP/1.1" 200 -
+2025-05-17 23:36:09,690 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:36:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-17 23:36:11,647 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:36:11] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:36:12,057 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:36:12] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:36:27,062 - root - INFO - Starting Flask application
+2025-05-17 23:36:27,082 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-17 23:36:27,082 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-17 23:36:27,084 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:36:27,736 - root - INFO - Starting Flask application
+2025-05-17 23:36:27,749 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:36:27,755 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:36:30,530 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:36:30] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:36:30,542 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:36:30] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:36:31,837 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:36:31] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:36:36,408 - root - INFO - New user registered successfully: benbichler2@gmail.com
+2025-05-17 23:36:36,409 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:36:36] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-17 23:36:36,474 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:36:36] "GET /complete-mfa-setup HTTP/1.1" 200 -
+2025-05-17 23:37:22,412 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\models\\user.py', reloading
+2025-05-17 23:37:22,458 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:37:23,167 - root - INFO - Starting Flask application
+2025-05-17 23:37:23,182 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:37:23,188 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:37:30,295 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\utils\\db.py', reloading
+2025-05-17 23:37:30,339 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:37:31,016 - root - INFO - Starting Flask application
+2025-05-17 23:37:31,032 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:37:31,037 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:37:38,135 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\utils\\mfa.py', reloading
+2025-05-17 23:37:38,180 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:37:38,868 - root - INFO - Starting Flask application
+2025-05-17 23:37:38,882 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:37:38,888 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:38:02,193 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\utils\\phishing.py', reloading
+2025-05-17 23:38:02,266 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:38:03,059 - root - INFO - Starting Flask application
+2025-05-17 23:38:03,074 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:38:03,081 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:38:10,199 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\utils\\validation.py', reloading
+2025-05-17 23:38:10,243 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:38:10,950 - root - INFO - Starting Flask application
+2025-05-17 23:38:10,968 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:38:10,973 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:38:37,168 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:38:37] "GET /complete-mfa-setup HTTP/1.1" 200 -
+2025-05-17 23:38:38,339 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\routes\\auth.py', reloading
+2025-05-17 23:38:38,386 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:38:39,102 - root - INFO - Starting Flask application
+2025-05-17 23:38:39,119 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:38:39,125 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:39:01,422 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\routes\\main.py', reloading
+2025-05-17 23:39:01,465 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:39:02,143 - root - INFO - Starting Flask application
+2025-05-17 23:39:02,157 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:39:02,164 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:39:14,306 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:39:14,358 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:42:54,755 - root - INFO - Starting Flask application
+2025-05-17 23:42:54,776 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-17 23:42:54,776 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-17 23:42:54,778 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:42:55,442 - root - INFO - Starting Flask application
+2025-05-17 23:42:55,457 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:42:55,463 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:42:55,835 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:42:55] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:42:55,846 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:42:55] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:42:57,695 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:42:57] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:43:01,411 - root - WARNING - Registration attempt with existing email: benbichler2@gmail.com
+2025-05-17 23:43:01,412 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:43:01] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-17 23:43:01,416 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:43:01] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:43:12,815 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:43:12] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:43:16,419 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:43:16] "POST /login HTTP/1.1" 200 -
+2025-05-17 23:43:22,788 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:43:22] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:43:23,424 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:43:23] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:43:23,960 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:43:23] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:43:45,213 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:43:45] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:46:32,938 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:46:32] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:47:03,082 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:47:03] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:47:04,367 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:47:04] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:47:04,372 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:47:04] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:51:05,117 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:51:05] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:51:06,073 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:51:06] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:51:10,123 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:51:10] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:52:20,750 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:52:20,795 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:52:21,483 - root - INFO - Starting Flask application
+2025-05-17 23:52:21,497 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:52:21,503 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:53:16,144 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:53:16,190 - werkzeug - INFO -  * Restarting with stat
+2025-05-17 23:53:16,888 - root - INFO - Starting Flask application
+2025-05-17 23:53:16,902 - werkzeug - WARNING -  * Debugger is active!
+2025-05-17 23:53:16,908 - werkzeug - INFO -  * Debugger PIN: 140-668-183
+2025-05-17 23:53:17,850 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:53:17] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:53:23,276 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:53:23] "GET /login HTTP/1.1" 200 -
+2025-05-17 23:53:23,847 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:53:23] "GET /register HTTP/1.1" 200 -
+2025-05-17 23:53:24,870 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:53:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-05-17 23:53:24,878 - werkzeug - INFO - 127.0.0.1 - - [17/May/2025 23:53:24] "GET /welcome HTTP/1.1" 200 -
+2025-05-17 23:55:08,052 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
+2025-05-17 23:55:08,096 - werkzeug - INFO -  * Restarting with stat

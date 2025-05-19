@@ -7,141 +7,359 @@ block content %}
   rel="stylesheet"
 />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<div class="container mt-5">
-  <div class="card shadow-sm mx-auto" style="max-width: 650px">
-    <div class="card-body text-center">
-      <h2 class="mb-4">Phishing Email Detector</h2>
+<div class="container">
+  <div class="card border-0 shadow-lg">
+    <div class="card-body p-5">
+      <h2 class="text-center mb-4">
+        <i class="fas fa-chart-bar me-2"></i>Phishing Analysis Result
+      </h2>
 
-      <p><strong>Email Author:</strong> {{ author }}</p>
-      <p><strong>Submitted Email:</strong></p>
-      <p>{{ email }}</p>
+      <!-- Phishing Score Card -->
+      <div class="score-container text-center mb-4">
+        <div class="score-circle mx-auto mb-3" data-score="{{ score }}">
+          <div class="score-number display-4">{{ score }}</div>
+          <div class="score-label">Risk Score</div>
+        </div>
 
-      <h4 class="mt-4">Phishing Probability:</h4>
-      <canvas
-        id="phishingChart"
-        width="300"
-        height="300"
-        class="mx-auto d-block mb-4"
-      ></canvas>
-
-      {% if virustotal_flagged %}
-      <div class="alert alert-danger mt-3 text-center">
-        ⚠️ The sender's domain (<strong>{{ author.split('@')[-1] }}</strong>)
-        has been flagged as suspicious or malicious by VirusTotal.
-        <br />
-        <a
-          href="{{ domain_report }}"
-          target="_blank"
-          class="btn btn-outline-warning btn-sm mt-2"
-        >
-          🔍 View VirusTotal Report
-        </a>
+        <div class="risk-level h4 mb-0">
+          {% if score >= 80 %}
+          <span class="text-danger">
+            <i class="fas fa-exclamation-triangle me-2"></i>High Risk
+          </span>
+          {% elif score >= 50 %}
+          <span class="text-warning">
+            <i class="fas fa-exclamation-circle me-2"></i>Medium Risk
+          </span>
+          {% else %}
+          <span class="text-success">
+            <i class="fas fa-check-circle me-2"></i>Low Risk
+          </span>
+          {% endif %}
+        </div>
       </div>
-      {% endif %} {% if author_flag_count >= 1 %}
-      <div class="alert alert-danger" role="alert">
-        ⚠️ This sender has sent suspicious emails before ({{ author_flag_count
-        }} time{{ 's' if author_flag_count > 1 else '' }}).
-      </div>
-      {% endif %} {% if ai_explanation %}
-      <div class="accordion mt-4" id="aiAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingAI">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseAI"
-              aria-expanded="false"
-              aria-controls="collapseAI"
-            >
-              💡 View AI Analysis
-            </button>
-          </h2>
-          <div
-            id="collapseAI"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingAI"
-            data-bs-parent="#aiAccordion"
-          >
-            <div
-              class="accordion-body"
-              style="white-space: pre-wrap; line-height: 1.6; font-size: 15px"
-            >
-              {{ ai_explanation }}
+
+      <!-- Combined Analysis Card -->
+      <div class="card bg-light">
+        <div class="card-body">
+          <!-- Sender Information -->
+          <div class="sender-info mb-4">
+            <h3 class="h5 mb-3">
+              <i class="fas fa-user me-2"></i>Sender Information
+            </h3>
+            <div class="ps-4">
+              <p class="mb-2">
+                <strong>From:</strong> {{ author }} {% if domain_trusted %}
+                <span class="badge bg-success ms-2">
+                  <i class="fas fa-check me-1"></i>Trusted Domain
+                </span>
+                {% endif %}
+              </p>
+              <p class="mb-0">
+                <strong>Domain:</strong>
+                {{ author.split('@')[1] }}
+                <a
+                  href="{{ domain_report }}"
+                  target="_blank"
+                  class="btn btn-sm btn-outline-secondary ms-2"
+                >
+                  <i class="fas fa-external-link-alt me-1"></i>Check Domain
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <hr class="my-4" />
+
+          <!-- Detection Explanations -->
+          <div class="detection-details mb-4">
+            <h3 class="h5 mb-3">
+              <i class="fas fa-list-ul me-2"></i>Detection Details
+            </h3>
+            <div class="ps-4">
+              {% if explanations %}
+              <ul class="list-group list-group-flush">
+                {% for explanation in explanations %}
+                <li
+                  class="list-group-item bg-transparent d-flex align-items-center ps-0"
+                >
+                  <span class="detection-icon me-3">
+                    <i class="fas fa-exclamation-circle text-warning"></i>
+                  </span>
+                  <span>{{ explanation }}</span>
+                </li>
+                {% endfor %}
+              </ul>
+              {% else %}
+              <p class="text-muted mb-0">
+                <i class="fas fa-info-circle me-2"></i>No suspicious patterns
+                detected
+              </p>
+              {% endif %}
+            </div>
+          </div>
+
+          {% if ai_explanation %}
+          <hr class="my-4" />
+
+          <!-- AI Analysis -->
+          <div class="ai-analysis mb-4">
+            <h3 class="h5 mb-3">
+              <i class="fas fa-robot me-2"></i>AI Analysis
+            </h3>
+            <div class="ps-4">
+              {% if "Phishing: Yes" in ai_explanation %}
+              <div class="alert alert-danger border-0 mb-4">
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                <strong>AI Detection: Likely Phishing</strong>
+              </div>
+              {% elif "Phishing: No" in ai_explanation %}
+              <div class="alert alert-success border-0 mb-4">
+                <i class="fas fa-check-circle me-2"></i>
+                <strong>AI Detection: Likely Safe</strong>
+              </div>
+              {% endif %}
+
+              <div class="ai-explanation">
+                {% set explanation_parts = ai_explanation.split('Explanation:')
+                %} {% if explanation_parts|length > 1 %} {% set bullet_points =
+                explanation_parts[1].strip().split('\n') %}
+                <div class="analysis-points">
+                  {% for point in bullet_points %} {% if point.strip() and '**'
+                  in point %} {% set point_parts = point.strip().split('**') %}
+                  {% if point_parts|length >= 3 %}
+                  <div
+                    class="list-group-item bg-transparent d-flex align-items-start ps-0"
+                  >
+                    <span class="detection-icon me-3 mt-1">
+                      <i class="fas fa-exclamation-circle text-warning"></i>
+                    </span>
+                    <div>
+                      <strong class="d-block mb-1"
+                        >{{ point_parts[1].strip() }}</strong
+                      >
+                      <span class="text-muted"
+                        >{{ point_parts[2].strip().strip(':').strip() }}</span
+                      >
+                    </div>
+                  </div>
+                  {% endif %} {% endif %} {% endfor %}
+                </div>
+                {% else %}
+                <div class="raw-explanation">{{ ai_explanation }}</div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+          <hr class="my-4" />
+
+          <!-- Email Content -->
+          <div class="email-content">
+            <h3 class="h5 mb-3">
+              <i class="fas fa-envelope me-2"></i>Email Content
+            </h3>
+            <div class="ps-4">
+              <pre class="mb-0"><code>{{ email }}</code></pre>
             </div>
           </div>
         </div>
       </div>
 
-      {% endif %}
-
-      <div class="d-flex justify-content-center gap-2 mt-3">
-        <a href="{{ url_for('index') }}" class="btn btn-primary"
-          >Analyze Another Email</a
-        >
-        <a href="{{ url_for('history') }}" class="btn btn-secondary"
-          >View Scan History</a
-        >
+      <!-- Action Buttons -->
+      <div class="text-center mt-4">
+        <a href="{{ url_for('index') }}" class="btn btn-primary me-2">
+          <i class="fas fa-search me-1"></i>Analyze Another Email
+        </a>
+        <a href="{{ url_for('history') }}" class="btn btn-outline-secondary">
+          <i class="fas fa-history me-1"></i>View History
+        </a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Chart.js CDN -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  .gauge-container {
+    width: 300px;
+    margin: 0 auto;
+    background: #001529;
+    padding: 40px;
+    border-radius: 20px;
+  }
+
+  .gauge {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+  }
+
+  .gauge::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: #1e3a5f;
+    border-radius: 150px 150px 0 0;
+  }
+
+  .gauge-fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: #4caf50;
+    transform-origin: center top;
+    transition: transform 1s ease-out;
+  }
+
+  .gauge-center {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--secondary-color)
+    );
+    color: white;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .score-circle::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--secondary-color)
+    );
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  .score-number {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  .score-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .list-group-item {
+    border: none;
+    padding: 0.75rem 0;
+  }
+
+  pre {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 0;
+    white-space: pre-wrap;
+  }
+
+  code {
+    color: var(--text-color);
+  }
+
+  .badge {
+    padding: 0.5em 0.8em;
+  }
+
+  .detection-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-explanation {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .analysis-points {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .alert {
+    border: none !important;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .alert-danger {
+    background-color: #fef2f2;
+    color: #dc2626;
+  }
+
+  .alert-success {
+    background-color: #f0fdf4;
+    color: #16a34a;
+  }
+
+  .card {
+    background-color: #f8fafc;
+  }
+
+  hr {
+    opacity: 0.1;
+  }
+
+  .text-muted {
+    color: #64748b !important;
+  }
+</style>
 
 <script>
-  window.onload = function () {
-    const phishingScore = parseInt("{{ score }}");
+  document.addEventListener("DOMContentLoaded", function () {
+    const scoreCircle = document.querySelector(".score-circle");
+    const score = parseInt(scoreCircle.dataset.score);
 
-    const color =
-      phishingScore >= 70
-        ? "#dc3545"
-        : phishingScore >= 30
-        ? "#fd7e14"
-        : "#28a745";
-
-    const ctx = document.getElementById("phishingChart").getContext("2d");
-
-    const centerTextPlugin = {
-      id: "centerText",
-      beforeDraw(chart, args, options) {
-        const { width, height, ctx } = chart;
-        ctx.save();
-        ctx.font = "bold 24px Arial";
-        ctx.fillStyle = options.color || "#000";
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillText(phishingScore + "%", width / 2, height / 2);
-        ctx.restore();
-      },
-    };
-
-    new Chart(ctx, {
-      type: "doughnut",
-      data: {
-        labels: ["Phishing Probability", "Remaining"],
-        datasets: [
-          {
-            data: [phishingScore, 100 - phishingScore],
-            backgroundColor: [color, "#e9ecef"],
-            borderWidth: 1,
-          },
-        ],
-      },
-      options: {
-        responsive: false,
-        cutout: "80%",
-        plugins: {
-          legend: { display: false },
-          tooltip: { enabled: false },
-          centerText: { color: color },
-        },
-      },
-      plugins: [centerTextPlugin],
-    });
-  };
+    // Set color based on score
+    if (score >= 80) {
+      scoreCircle.style.background =
+        "linear-gradient(135deg, #dc3545, #b02a37)";
+    } else if (score >= 50) {
+      scoreCircle.style.background =
+        "linear-gradient(135deg, #ffc107, #cc9a06)";
+    } else {
+      scoreCircle.style.background =
+        "linear-gradient(135deg, #198754, #146c43)";
+    }
+  });
 </script>
 
 {% endblock %}
