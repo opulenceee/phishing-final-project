@@ -28,3 +28,6 @@
 2025-05-19 13:24:32,085 - werkzeug - INFO -  * Debugger PIN: 140-668-183
 2025-05-19 13:24:40,183 - werkzeug - INFO -  * Detected change in 'C:\\Users\\benbi\\Desktop\\phishing-project\\app.py', reloading
 2025-05-19 13:24:40,246 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 13:24:41,018 - root - INFO - USE_LOCAL_AI setting: True
+2025-05-19 13:24:41,037 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 13:24:41,043 - werkzeug - INFO -  * Debugger PIN: 140-668-183
