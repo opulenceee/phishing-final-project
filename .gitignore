@@ -1,2 +1,6 @@
 #.env
 history.db
+*.log
+*.log.*
+logs/
+datasets/
