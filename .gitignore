@@ -4,3 +4,4 @@ history.db
 *.log.*
 logs/
 datasets/
+.env
