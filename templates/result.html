@@ -16,7 +16,6 @@ block content %}
         <i class="fas fa-chart-bar me-2"></i>Phishing Analysis Result
       </h2>
 
-      <!-- Phishing Score Card -->
       <div class="score-container text-center mb-4">
         <div class="score-circle mx-auto mb-3" data-score="{{ score }}">
           <div class="score-number display-4">{{ score }}</div>
@@ -40,10 +39,21 @@ block content %}
         </div>
       </div>
 
-      <!-- Combined Analysis Card -->
+      {% if previously_flagged %}
+      <div class="alert alert-warning mb-4">
+        <i class="fas fa-exclamation-triangle me-2"></i>
+        <strong>Warning:</strong> This sender has been previously flagged for
+        suspicious activity.
+      </div>
+      {% endif %} {% if duplicate_email %}
+      <div class="alert alert-info mb-4">
+        <i class="fas fa-info-circle me-2"></i>
+        <strong>Note:</strong> Similar email content has been analyzed before.
+      </div>
+      {% endif %}
+
       <div class="card bg-light">
         <div class="card-body">
-          <!-- Sender Information -->
           <div class="sender-info mb-4">
             <h3 class="h5 mb-3">
               <i class="fas fa-user me-2"></i>Sender Information
@@ -64,7 +74,7 @@ block content %}
                   target="_blank"
                   class="btn btn-sm btn-outline-secondary ms-2"
                 >
-                  <i class="fas fa-external-link-alt me-1"></i>Check Domain
+                  <i class="fas fa-external-link-alt me-1"></i>VirusTotal
                 </a>
               </p>
             </div>
@@ -72,7 +82,6 @@ block content %}
 
           <hr class="my-4" />
 
-          <!-- Detection Explanations -->
           <div class="detection-details mb-4">
             <h3 class="h5 mb-3">
               <i class="fas fa-list-ul me-2"></i>Detection Details
