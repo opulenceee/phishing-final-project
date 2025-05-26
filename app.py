@@ -383,19 +383,12 @@ def index():
         conn = get_db_connection()
         c = conn.cursor()
         # checking if sender domain already in DB
-
         c.execute("""
             SELECT COUNT(*) FROM emails 
             WHERE email_author = ? AND phishing_score >= ?
         """, (email_author, MIN_PHISHING_SCORE_FOR_AUTHOR_FLAG))
         previously_flagged = c.fetchone()[0] > 0
-
-        # checking if email already in DB
-        c.execute("""
-            SELECT COUNT(*) FROM emails 
-            WHERE email_text = ? AND user_id = ?
-        """, (email_text, current_user.id))
-        duplicate_email = c.fetchone()[0] > 0
+        
 
         if previously_flagged:
             phishing_score = min(phishing_score + PHISHING_SCORE_PREVIOUSLY_FLAGGED_AUTHOR, MAX_PHISHING_SCORE)
@@ -403,9 +396,6 @@ def index():
             logger.warning(f"Author {email_author} was previously flagged for phishing")
 
         
-        if duplicate_email:
-            logger.info(f"Duplicate email content detected for user {current_user.id}")
-
         urls = extract_urls(email_text)
         for url in urls:
             domain = extract_root_domain(url)
@@ -434,6 +424,13 @@ def index():
             VALUES (?, ?, ?, ?, ?)
         """, (current_user.id, email_author, email_text, phishing_score, datetime.now().isoformat()))
         conn.commit()
+
+        # check if email is already in DB
+        c.execute("""
+            SELECT COUNT(*) FROM emails 
+            WHERE user_id = ? AND email_text = ?
+        """, (current_user.id, email_text))
+        duplicate_email = c.fetchone()[0] > 1  # > 1 because we just inserted one
         conn.close()
 
         session['last_analysis'] = {
@@ -452,18 +449,21 @@ def index():
 @app.route('/result')
 @login_required
 def result():
-    if 'last_analysis' not in session:
+    analysis = session.get('last_analysis')
+    if not analysis:
         return redirect(url_for('index'))
     
-    analysis = session['last_analysis']
-    return render_template('result.html',
+    email_domain = analysis['email_author'].split('@')[-1] if '@' in analysis['email_author'] else ''
+    domain_trusted = email_domain.lower() in WHITELIST_DOMAINS
+    
+    return render_template('result.html', 
+                         score=analysis['phishing_score'],
                          email=analysis['email_text'],
                          author=analysis['email_author'],
-                         score=analysis['phishing_score'],
-                         explanations=analysis['explanations'],
                          ai_explanation=analysis['ai_explanation'],
-                         previously_flagged=analysis.get('previously_flagged', False),
-                         duplicate_email=analysis.get('duplicate_email', False))
+                         explanations=analysis['explanations'],
+                         domain_trusted=domain_trusted,
+                         domain_report=f"https://www.virustotal.com/gui/domain/{email_domain}")
 
 @app.route('/history')
 @login_required
@@ -657,88 +657,6 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('welcome'))
-
-def check_hybrid_analysis(domain):
-    if domain.lower() in WHITELIST_DOMAINS:
-        return False, []
-
-    api_key = os.getenv("HYBRID_ANALYSIS_API_KEY")
-    if not api_key:
-        logger.warning("HYBRID_ANALYSIS_API_KEY not found in environment variables")
-        return False, []
-
-    url = "https://www.hybrid-analysis.com/api/v2/quick-scan/url"
-    headers = {
-        "api-key": api_key,
-        "User-Agent": "Falcon"
-    }
-    data = {
-        "url": f"http://{domain}"
-    }
-
-    try:
-        response = requests.post(url, headers=headers, json=data)
-        if response.status_code != 200:
-            logger.error(f"Hybrid Analysis API error: {response.status_code} - {response.text}")
-            return False, []
-
-        scan_data = response.json()
-        issues = []
-        score_increase = 0
-
-        # Check various scanners
-        scanners = scan_data.get("scanners", {})
-        
-        # Check VirusTotal results
-        vt_scan = scanners.get("virustotal", {})
-        if vt_scan.get("positives", 0) > 0:
-            score_increase += 30
-            issues.append(f"Domain flagged by VirusTotal ({vt_scan.get('positives')} detections)")
-
-        # Check CrowdStrike ML results
-        cs_scan = scanners.get("crowdstrike_ml", {})
-        if cs_scan.get("status") == "malicious":
-            score_increase += 25
-            issues.append("Domain flagged by CrowdStrike ML")
-
-        # Check ScamAdviser results
-        scam_scan = scanners.get("scam_adviser", {})
-        if scam_scan.get("status") == "malicious":
-            score_increase += 20
-            issues.append("Domain flagged by ScamAdviser")
-
-        # Check Criminal IP results
-        criminal_ip = scanners.get("criminal_ip", {})
-        if criminal_ip.get("status") == "malicious":
-            score_increase += 25
-            issues.append("Domain flagged by Criminal IP")
-
-        return score_increase > 0, issues
-
-    except Exception as e:
-        logger.error(f"Error checking Hybrid Analysis: {e}")
-        return False, []
-
-def hybrid_domain_analysis(domain):
-    if domain.lower() in WHITELIST_DOMAINS:
-        return False, []
-
-    issues = []
-    score_increase = 0
-
-    # Check VirusTotal
-    vt_malicious = check_virustotal_domain(domain)
-    if vt_malicious:
-        score_increase += PHISHING_SCORE_VIRUSTOTAL_FLAGGED_DOMAIN
-        issues.append(f"Domain {domain} was flagged by VirusTotal")
-
-    # Check Hybrid Analysis
-    ha_malicious, ha_issues = check_hybrid_analysis(domain)
-    if ha_malicious:
-        score_increase += 30
-        issues.extend(ha_issues)
-
-    return score_increase > 0, issues
 
 if __name__ == '__main__':
     app.run(debug=True)
