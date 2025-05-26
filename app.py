@@ -463,7 +463,9 @@ def result():
                          ai_explanation=analysis['ai_explanation'],
                          explanations=analysis['explanations'],
                          domain_trusted=domain_trusted,
-                         domain_report=f"https://www.virustotal.com/gui/domain/{email_domain}")
+                         domain_report=f"https://www.virustotal.com/gui/domain/{email_domain}",
+                         previously_flagged=analysis['previously_flagged'],
+                         duplicate_email=analysis['duplicate_email'])
 
 @app.route('/history')
 @login_required
